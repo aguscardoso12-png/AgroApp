@@ -1,0 +1,273 @@
+
+
+
+header{
+    background-color: rgb(29, 161, 40);
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 100px;
+    border: 2px solid green;
+
+}
+
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #bcfc72;
+    color: rgb(0, 0, 0);
+}
+
+.encabezado, .pie{
+    text-align: center;
+    color:rgb(0, 0, 0);
+    padding: 25px;
+}
+
+.contenedor{
+    max-width:1200px;
+    margin:auto;
+    padding:30px;
+}
+
+.lista-cultivos{
+    display:flex;
+    justify-content:center;
+    align-items:strech;
+    gap:25px;
+}
+
+.card-cultivo{
+    width:320px;
+    background-color:rgb(189, 150, 106);
+    border-radius:14px;
+    box-shadow: 5px 5px 10px rgb(80, 36, 16);
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.card-cultivo h3{
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:white;
+    text-align:center;
+    font-size:40px;
+    border-bottom:2px solid rgb(243, 203, 144);
+}
+
+.card-cultivo p{
+    line-height:1.5;
+    
+}
+
+
+
+.card-cultivo:hover{
+    transform: translateX(-6px);
+
+}
+
+.card-cultivo img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    opacity:0.85;
+    transition:0.3s;
+    border-radius: 20px;
+
+}
+
+.card-cultivo:hover img{
+    opacity:1;
+}
+
+
+
+h1{
+    color:rgb(1, 4, 54);
+    text-align:center;
+    font-size: 50px;
+}
+
+
+h2{
+    color:rgb(1, 9, 77);
+    text-align:center;
+    font-size: 34px;
+}
+
+
+p{
+    color:rgb(0, 0, 0);
+    text-align: justify;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.card{
+    background-color: white;
+    margin:20px;
+    padding:20px;
+    border:2px solid lightgray;
+    border-radius:15px;
+    box-shadow: 5px 5px 10px lightgray;
+
+}
+
+.card {
+    transition: transform 0.10s;
+}
+
+.card:hover {
+    transform: scale(0.95);
+    background-color: rgb(29, 161, 40);
+     border: 2px solid green;
+    box-shadow:5px 5px 10px lightgreen;
+}
+
+.card h2{
+    color :rgb(20, 4, 120);
+    text-align: center;
+     font-size: 30px;
+     justify-content: center;
+
+}
+
+.card p{
+    color:darkblue;
+    font-size:30px;
+    text-align: center;
+     font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+}
+
+.card img{
+    width:50%;
+    border-radius: 10px;
+ justify-content: center;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+.contactos{
+    margin:5px;
+    padding:10px;
+    text-align: center;
+     font-family: 'Times New Roman', Times, serif;
+     font-size: 25px;
+     color:rgb(0, 0, 0);
+    background-color: rgb(77, 238, 77);
+    border-radius:15px;
+}
+
+.contenido-card{
+    padding:25px;
+}
+
+.btn-cultivo{
+    background-color: rgb(69, 252, 85);
+    color:rgb(0, 0, 0);
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor: pointer;
+    font-size: 25px;
+    transition:0.10s;
+}
+
+.btn-cultivo:hover{
+    background-color: rgb(147, 247, 155);
+}
+
+.botones{
+    margin:10px;
+    padding:10px;
+    text-align: center;
+     font-family: 'Times New Roman', Times, serif;
+     font-size: 35px;
+     color:rgb(0, 0, 0);
+    background-color: rgb(77, 238, 77);
+    border:2px solid lightgreen;
+    border-radius:100px;
+
+}
+
+nav ul{
+    background-color: rgb(29, 161, 40);
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+     padding: 30px;
+     border-radius: 15px;
+     box-shadow: 15px 15px 10px darkgreen;
+     border: 2px solid green;
+}
+
+nav ul li{
+    margin: 0 10px;
+    padding: 5px;
+     font-size: 20px;
+}
+
+nav ul li a{
+    color: rgb(3, 11, 73);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    background-color: #157221;
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    color:white;
+    padding: 20px 30px;
+    display: block;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #009879;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #023602;
+    padding: 0px;
+    margin: 0px;
+    min-width: 220px;
+}
+
+.submenu li {
+    padding: 15px;
+}
+
+.desplegable:hover .submenu {
+    display: block;
+}
+
+
+footer p{
+    background-color: rgb(29, 161, 40);
+     padding: 20px;
+     margin: 10px;
+    color:rgb(0, 0, 0);
+    text-align: center;
+    font-size: 25px;
+    border-radius: 15px;
+     box-shadow: 5px 10px 10px green;
+     border: 2px solid rgb(25, 143, 35);    
+}
+

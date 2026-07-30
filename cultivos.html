@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Muestra de cultivos</title>
+    </head>
+ 
+<link rel="stylesheet" href="CSS/estilos.css">
+<script src="JS/script.js"defer></script>
+    <body>
+        <!--foto de cultivos-->
+        <header class="encabezado">
+           <h1>Cultivos sostenibles</h1>
+           <p>Información para producir cuidando el suelo y el agua</p>
+    
+        <nav class="navbar">
+        <ul class="menu">
+            <li><a href="index.html">Volver al inicio</a></li>
+             <li><a href="Productores.html">Productores</a></li>
+            <li><a href="cultivos.html">Cultivos</a></li>
+            <li><a href="reporte y sugerencias.html">Reporte y sugerencias</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li class="desplegable">
+                <a href="Practicas.html">Prácticas sostenibles</a></li>
+          <ul class="submenu">
+          <li><a href="Practicas.html#Riego">Eficiencia hídrica y conservacion de biodiversidad</a></li>
+          <li><a href="Practicas.html#ManjeoDePlagas">Manejo ecologico de plagas y fertilizacion organica</a></li>
+          </ul>
+        </li>
+        </ul>
+    </nav>
+        </header>
+
+<main class="contenedor">
+    <section class="intro-cultivos">
+        <h2>Catálogo de cultivos</h2>
+        <p>Seleccíona un cultivo para conocer prácticas recomendadas</p>
+    </section>
+    <section class="lista-cultivos">
+
+        <article class="card-cultivo" id="tomate">
+
+            <div class="contenido-card">
+            <h3>Tomate</h3>
+            <img src="img/tomate.jpg" alt="Cultivo de tomate" width="350">
+            <p>El tomate es un cultivo sensible a enfermedades, se recomienda rotación de cultivos y uso de fertilizantes orgánicos.</p>
+            <button class="btn-cultivo" id="btn-tomate" type="button">Ver recomendaciones</button>
+            </div>
+        </article>
+
+        <article class="card-cultivo" id="lechuga">
+            <div class="contenido-card">
+            <h3>Lechuga</h3>
+            <img src="img/lechuga.jpg" alt="Cultivo de lechuga" width="300">
+            <p>La lechuga es un cultivo que requiere suelos bien drenados, se recomienda rotación de cultivos y uso de fertilizantes orgánicos.</p>
+            <button class="btn-cultivo" id="btn-lechuga" type="button">Ver recomendaciones</button>
+            </div>
+        </article>
+
+        <article class="card-cultivo" id="maiz">
+            <div class="contenido-card">
+            <h3>Maíz</h3>
+            <img src="img/maiz.jpg" alt="Cultivo de maíz" width="300">
+            <p>El maíz es un cultivo importante en la región, se recomienda rotación de cultivos y uso de fertilizantes orgánicos.</p>
+            <button class="btn-cultivo" id="btn-maiz" type="button">Ver recomendaciones</button>
+            </div>
+        </article>
+    </section>
+    <!--Zona modificada por Java Script-->
+    <section id="resultado-cultivo"
+     class="resultado-cultivo">
+        <p id="mensaje-cultivo">
+            Selecciona un cultivo para ver recomendaciones</p>
+    </section>
+</main>
+
+
+    <footer class="pie">
+        <p> &copy; 2026 - Agro Sostenible CREADORES: Lourdes fraque,Joaquín de souza y Agustina Cardoso </p>
+    </footer>
+
+    </body>
+</html>

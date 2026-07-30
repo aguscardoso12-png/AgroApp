@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contactos</title>
+    </head>
+
+<link rel="stylesheet" href="CSS/estilos.css">
+    
+    <body>
+        <header>
+            <h1>Contactos</h1>
+            <p><!--contactos--></p>
+            <!--pondria en seciones los contactos-->
+    
+   <nav class="navbar">
+        <ul class="menu">
+            <li><a href="index.html">Volver al inicio</a></li>
+             <li><a href="Productores.html">Productores</a></li>
+            <li><a href="cultivos.html">Cultivos</a></li>
+            <li><a href="reporte y sugerencias.html">Reporte y sugerencias</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li class="desplegable">
+                <a href="Practicas.html">Prácticas sostenibles</a></li>
+          <ul class="submenu">
+          <li><a href="Practicas.html#Riego">Eficiencia hídrica y conservacion de biodiversidad</a></li>
+          <li><a href="Practicas.html#ManjeoDePlagas">Manejo ecologico de plagas y fertilizacion organica</a></li>
+          </ul>
+        </li>
+        </ul>
+    </nav>
+        </header>
+
+
+<section class="contactos">
+        <form>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="email">Correo Electrónico:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="asunto">Asunto:</label><br>
+            <input type="text" id="asunto" name="asunto" required><br><br>
+
+            <label for="contacto">Motivo de Contacto:</label><br>
+            <select id="contacto" name="contacto"><br><br>
+            <option value="consulta">Consulta</option>
+            <option value="Sugerencias">Sugerencias</option>
+            <option value="Solicitudes">Solicitudes de infirmación</option>
+            <option value="Soporte">Soporte técnico</option>
+            </select><br><br>
+
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="5" cols="40" required></textarea><br><br>
+        </section>
+        <section class="botones">
+            <button type="submit" value="Enviar">Enviar</button>
+
+            <button type="reset" value="Limpiar">Limpiar</button>
+        </section>
+            
+        </form>    
+        
+    <footer>
+        <p> &copy; 2026 - Agro Sostenible CREADORES: Lourdes fraque,Joaquín de souza y Agustina Cardoso </p>
+    </footer>
+
+    </body>
+</html>
