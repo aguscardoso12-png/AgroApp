@@ -1,5 +1,12 @@
-
-
+.logo-esquina{
+    
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 160px;
+    border-radius: 50%;
+    border: 2px solid rgb(41, 146, 9);
+}
 
 header{
     background-color: rgb(29, 161, 40);
@@ -21,6 +28,7 @@ body{
 .encabezado, .pie{
     text-align: center;
     color:rgb(0, 0, 0);
+     background-color: #27f353;
     padding: 25px;
 }
 
