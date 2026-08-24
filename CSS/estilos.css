@@ -1,5 +1,4 @@
 .logo-esquina{
-    
     position: absolute;
     top: 20px;
     left: 30px;
@@ -89,7 +88,10 @@ body{
     opacity:1;
 }
 
-
+.card-cultivo.seleccionado {
+    border: 3px solid #2e6b43
+    background-color greenyellow
+}
 
 h1{
     color:rgb(1, 4, 54);
