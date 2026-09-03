@@ -1,37 +1,90 @@
+console.log("JS conectado correctamente");
+
 const botonTomate = document.getElementById("btn-tomate")
+console.log("Boton tomate:", botonTomate);
+
 const botonLechuga = document.getElementById("btn-lechuga")
 const botonMaiz = document.getElementById("btn-maiz")
+const botonMorron = document.getElementById("btn-morron")
+const botonCebolla = document.getElementById("btn-cebolla")
+
 const mensajeCultivo = document.getElementById("mensaje-cultivo");
 
-function botonTomate.addEventListener()click",  {
-    //Intrucciones
-    mensajeCultivo.textContent = "Regar temprano.";
+const tarjetaTomate = document.getElementById("tomate");
+const tarjetaLechuga = document.getElementById("lechuga");
+const tarjetaMaiz = document.getElementById("maiz");
+const tarjetaMorron = document.getElementById("morron");
+const tarjetaCebolla = document.getElementById("cebolla");
 
+function mostrarRecomendacion(texto,
+    tarjetaSeleccionada) {
+    mensajeCultivo.textContent = texto;
+    tarjetaTomate.classList.remove("seleccionado");
+    tarjetaLechuga.classList.remove("seleccionado");
+    tarjetaMaiz.classList.remove("seleccionado");
+    tarjetaMorron.classList.remove("seleccionado");
+    tarjetaCebolla.classList.remove("seleccionado");
+    tarjetaSeleccionada.classList.add("seleccionado");
+}
 
-tarjetaTomate.classList.add("seleccionado");
+function seleccionarTomate() {
+    mostrarRecomendacion(
+        "El tomate necesita riego moderado y exposición al sol. Fertilizar cada 2 semanas." +
+        "Regar en la mañana." +
+    "No regar en exceso.",
+        tarjetaTomate
+    );
+}
+function seleccionarLechuga() {
+    mostrarRecomendacion(
+        "La lechuga requiere riego frecuente y sombra parcial. Fertilizar cada 3 semanas.",
+        tarjetaLechuga
+    );
+}
 
-tarjetaLechuga.classList.remove("seleccionado");
+function seleccionarMaiz() {
+    mostrarRecomendacion(
+        "El maíz necesita riego regular y pleno sol. Fertilizar cada 4 semanas.",
+        tarjetaMaiz
+    );
+}
 
-tarjetaMaiz.classList.remove("seleccionado");} );
+function seleccionarMorron() {
+    mostrarRecomendacion(
+        "El morrón requiere riego moderado y exposición al sol. Fertilizar cada 3 semanas.",
+        tarjetaMorron
+    );
+}
 
+function seleccionarCebolla() {
+    mostrarRecomendacion(
+        "La cebolla necesita riego regular y sombra parcial. Fertilizar cada 4 semanas.",
+        tarjetaCebolla
+    );
+}
 
-botonLechuga.addEventListener("click", function() {
-    //Intrucciones
-    mensajeCultivo.textContent = "La lechuga es una planta de clima fresco que se cultiva en épocas de primavera y otoño. Se recomienda sembrar en suelos ricos en materia orgánica y bien drenados. Es importante mantener un riego constante y protegerla del sol directo para evitar el amargor.";
-tarjetaLechuga.classList.add("seleccionado");
+botonTomate.addEventListener(
+    "click",
+    seleccionarTomate
+);
 
-tarjetaTomate.classList.remove("seleccionado");
+botonLechuga.addEventListener(
+    "click",
+    seleccionarLechuga
+);
 
-tarjetaMaiz.classList.remove("seleccionado");
-} );
+botonMaiz.addEventListener(
+    "click",
+    seleccionarMaiz
+);
 
+botonMorron.addEventListener(
+    "click",
+    seleccionarMorron
+);
 
-botonMaiz.addEventListener("click", function() {
-    //Intrucciones
-    mensajeCultivo.textContent = "El maíz es una planta que requiere de un clima cálido y soleado para crecer adecuadamente. Se recomienda sembrar en primavera o verano, en suelos bien drenados y ricos en materia orgánica. Es importante mantener un riego constante y evitar el exceso de agua para prevenir enfermedades.";
-tarjetaMaiz.classList.add("seleccionado");
+botonCebolla.addEventListener(
+    "click",
+    seleccionarCebolla
+);
 
-tarjetaTomate.classList.remove("seleccionado");
-
-tarjetaLechuga.classList.remove("seleccionado");
-} );
