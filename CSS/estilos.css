@@ -36,10 +36,11 @@ body{
     padding:30px;
 }
 
+
 .lista-cultivos{
-    display:flex;
-    justify-content:center;
-    align-items:strech;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items:stretch;
     gap:25px;
 }
 
@@ -159,6 +160,7 @@ p{
      margin-left: auto;
      margin-right: auto;
 }
+
 
 .contactos{
     margin:5px;
