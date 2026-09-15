@@ -1,12 +1,15 @@
 console.log("JS conectado correctamente");
 
-const botonTomate = document.getElementById("btn-tomate")
+const botonTomate = document.getElementById("btn-tomate");
 console.log("Boton tomate:", botonTomate);
 
-const botonLechuga = document.getElementById("btn-lechuga")
-const botonMaiz = document.getElementById("btn-maiz")
-const botonMorron = document.getElementById("btn-morron")
-const botonCebolla = document.getElementById("btn-cebolla")
+const botonLechuga = document.getElementById("btn-lechuga");
+const botonMaiz = document.getElementById("btn-maiz");
+const botonMorron = document.getElementById("btn-morron");
+const botonCebolla = document.getElementById("btn-cebolla");
+const botonPapa = document.getElementById("btn-papa");
+
+const botonLimpiar=document.getElementById("btn-limpiar");
 
 const mensajeCultivo = document.getElementById("mensaje-cultivo");
 
@@ -15,19 +18,25 @@ const tarjetaLechuga = document.getElementById("lechuga");
 const tarjetaMaiz = document.getElementById("maiz");
 const tarjetaMorron = document.getElementById("morron");
 const tarjetaCebolla = document.getElementById("cebolla");
+const tarjetaPapa = document.getElementById("papa")
+
 
 function mostrarRecomendacion(texto,
     tarjetaSeleccionada) {
+        console.log("Texto recibido", texto);
+        console.log("Tarjeta seleccionada:",tarjetaSeleccionada)
     mensajeCultivo.textContent = texto;
     tarjetaTomate.classList.remove("seleccionado");
     tarjetaLechuga.classList.remove("seleccionado");
     tarjetaMaiz.classList.remove("seleccionado");
     tarjetaMorron.classList.remove("seleccionado");
     tarjetaCebolla.classList.remove("seleccionado");
+    tarjetaPapa.classList.remove("seleccionado");
     tarjetaSeleccionada.classList.add("seleccionado");
 }
 
 function seleccionarTomate() {
+    console.log("Clic en Tomate")
     mostrarRecomendacion(
         "El tomate necesita riego moderado y exposición al sol. Fertilizar cada 2 semanas." +
         "Regar en la mañana." +
@@ -63,7 +72,15 @@ function seleccionarCebolla() {
     );
 }
 
+function seleccionarPapa() {
+    mostrarRecomendacion(
+        "La papa es un cultivo que requiere suelos bien drenados, se recomienda rotación de cultivos y uso de fertilizantes orgánicos.",
+        tarjetaPapa
+    );
+}
+
 botonTomate.addEventListener(
+
     "click",
     seleccionarTomate
 );
@@ -88,3 +105,29 @@ botonCebolla.addEventListener(
     seleccionarCebolla
 );
 
+botonPapa.addEventListener(
+    "click", 
+    seleccionarPapa
+)
+
+function limpiarSeleccion() {
+    mensajeCultivo.textContent = "";
+
+    tarjetaTomate.classList.remove("seleccionado");
+    tarjetaLechuga.classList.remove("seleccionado");
+    tarjetaMaiz.classList.remove("seleccionado");
+    tarjetaMorron.classList.remove("seleccionado");
+    tarjetaCebolla.classList.remove("seleccionado");
+}
+
+botonLimpiar.addEventListener(
+    "click",
+    limpiarSeleccion
+);
+
+/*Pruebas
+
+const numeros=[1,2,3,4,5];
+console.log(numeros.length);
+
+*/
