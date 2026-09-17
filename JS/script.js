@@ -20,18 +20,31 @@ const tarjetaMorron = document.getElementById("morron");
 const tarjetaCebolla = document.getElementById("cebolla");
 const tarjetaPapa = document.getElementById("papa")
 
+const tarjetasCultivos = [
+    tarjetaTomate,
+    tarjetaLechuga,
+    tarjetaMaiz,
+    tarjetaMorron,
+    tarjetaCebolla,
+    tarjetaPapa
+];
+
+function mostrarTarjeta(tarjeta){
+    console.log(tarjeta);
+}
+
+tarjetasCultivos.forEach(mostrarTarjeta);
+
+
 
 function mostrarRecomendacion(texto,
     tarjetaSeleccionada) {
         console.log("Texto recibido", texto);
         console.log("Tarjeta seleccionada:",tarjetaSeleccionada)
     mensajeCultivo.textContent = texto;
-    tarjetaTomate.classList.remove("seleccionado");
-    tarjetaLechuga.classList.remove("seleccionado");
-    tarjetaMaiz.classList.remove("seleccionado");
-    tarjetaMorron.classList.remove("seleccionado");
-    tarjetaCebolla.classList.remove("seleccionado");
-    tarjetaPapa.classList.remove("seleccionado");
+  
+    tarjetasCultivos.forEach(quitarSeleccion);
+
     tarjetaSeleccionada.classList.add("seleccionado");
 }
 
@@ -113,17 +126,19 @@ botonPapa.addEventListener(
 function limpiarSeleccion() {
     mensajeCultivo.textContent = "";
 
-    tarjetaTomate.classList.remove("seleccionado");
-    tarjetaLechuga.classList.remove("seleccionado");
-    tarjetaMaiz.classList.remove("seleccionado");
-    tarjetaMorron.classList.remove("seleccionado");
-    tarjetaCebolla.classList.remove("seleccionado");
+    tarjetasCultivos.forEach(quitarSeleccion);
 }
 
 botonLimpiar.addEventListener(
     "click",
     limpiarSeleccion
 );
+
+function quitarSeleccion(tarjeta) {
+    console.log("Quitando seleccion de tarjeta:", tarjeta);
+    tarjeta.classList.remove("seleccionado")
+}
+tarjetasCultivos.forEach(quitarSeleccion);
 
 /*Pruebas
 
