@@ -17,9 +17,7 @@
     <main>
   <nav class="navbar">
         <ul class="menu">
-            <li><a href="Productores.html">Productores</a></li>
             <li><a href="cultivos.html">Cultivos</a></li>
-            <li><a href="reporte y sugerencias.html">Reporte y sugerencias</a></li>
             <li><a href="contactos.html">Contactos</a></li>
             <li class="desplegable">
                 <a href="Practicas.html">Prácticas sostenibles</a></li>
@@ -105,8 +103,51 @@
         <div class="contenido-card">
     <button class="btn-cultivo" type="reset" value="limpiarSeleccion" id="btn-limpiar">Limpiar</button>
     </article>
+<section class="seccion-formmulario">
+    <h2>Agregar cultivo</h2>
 
+    <form id="form-cultivo"
+    <!-- campos del cultivo -->
+
+    <label for="nombre-cultivo">Nombre:</label>
+    <input type="text" id="nombre-cultivo" requered minlength="3">
+
+    <label for="tipo-cultivo">Tipo:</label>
+    <selec id="tipo-cultivo" requered>
+        <option value="hortaliza">Hortaliza</option>
+        <option value="fruta">Fruta</option>
+        <option value="cereal">Cereal</option>
+        <option value="legumbre">Legumbre</option>
+    </selec>
+
+    <label for="reconmendacion-cultivo">Recomendación:</label>
+    <textarea id="reconmendacion-cultivo" requered minlength="10"></textarea>
+    <label for="riego-cultivo">Riego</label>
+    <select id="riego-cultivo" requered>
+        <option value="bajo">Bajo</option>
+        <option value="medio">Medio</option>
+        <option value="alto">Alto</option>
+    </select>
+
+    <label for="imagen-cultivo">Imagen:</label>
+    <input 
+    type="text" 
+    id="imagen-cultivo"
+    placeholder="img/papa.jpg"
+    required
+    >
+
+
+    <button class="btn-cultivo" type="submit">Agregar cultivo</button>
+
+</form>
+<p id="mensaje-formulario"></p>
+</section>
     
+
+
+</section>
+
 </main>
 
 

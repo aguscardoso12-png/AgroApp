@@ -35,7 +35,37 @@ function mostrarTarjeta(tarjeta){
 
 tarjetasCultivos.forEach(mostrarTarjeta);
 
+const cultivos = {
+    id: 1,
+    nombre: "Tomate",
+    tipo: "Hortaliza",
+    riego: "Regular",
+    imagen: "tomate.jpg",
+}
+{
+    id: 2,
+    nombre: "Lechuga",
+    tipo: "Hortaliza",
+    recomentdaciones: "La lechuga requiere riego frecuente y sombra parcial. Fertilizar cada 3 semanas.",
+    imagen: "lechuga.jpg",
+}
 
+function crearTarjetaCultivo(cultivo) {
+    const tarjeta =
+    document.classList.add("article");
+    tarjeta.classList.add("card-cultivo");
+    
+    const imagen =
+     document.createElement("img");
+
+     imagen.src = cultivo.imagen;
+     imagen.alt =
+     "Imagen del cultivo" + cultivo.nombre;
+
+     const titulo = 
+     document.createElement("h3");
+     titulo.textContent = cultivo.nombre;
+}
 
 function mostrarRecomendacion(texto,
     tarjetaSeleccionada) {
@@ -139,6 +169,7 @@ function quitarSeleccion(tarjeta) {
     tarjeta.classList.remove("seleccionado")
 }
 tarjetasCultivos.forEach(quitarSeleccion);
+
 
 /*Pruebas
 
